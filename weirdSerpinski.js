@@ -2,7 +2,7 @@ var num, numO1, num02, prop;
 var maxPoints = 2000;
 var Points = [];
 var inputBox;
-var inputClicked = false; // declare the variable that tracks the state
+var inputClicked;  // declare the variable that tracks the state
 
 
 
@@ -16,6 +16,7 @@ function setup() {
   inputBox = document.getElementById('toggle');
 
   updateInput();
+  inputClicked = false;
 }
 
 function draw() {
