@@ -1,0 +1,43 @@
+body {
+  font-family: Helvetica;
+  letter-spacing: 0.05ex;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  font-size: 1.2rem;
+}
+
+#overlay{
+  display: inline-block;
+  width: 100%;
+  max-width: 350px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 64px;
+}
+
+#toggle{
+  margin: 20px;
+}
+
+#toggle label{
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 0.7rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1ex;
+}
+
+#toggle input[type='number']{
+  display: inline-block;
+  width: 70px;
+  font-size: 20px;
+  padding: 6px 8px;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 2px;
+}

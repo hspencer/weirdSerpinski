@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Weird Serpinski</title>
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language='javascript' type='text/javascript' src='libraries/p5.js'></script>
+  <script language='javascript' type='text/javascript' src='libraries/p5.dom.js'></script>
+  <script language='javascript' type='text/javascript' src='weirdSerpinski.js'></script>
+  <link rel="stylesheet" type="text/css" href="ws.css">
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+
+  <!-- This line removes any default padding and style.
+  You might only need one of these values set. -->
+</head>
+
+<body>
+  <div id='overlay'>
+    <h1>Weird Serpinski Algorithm</h1>
+    <ol>
+      <li>place <span id='num-output-1'></span> points randomly (literally, click anywere)</li>
+      <li>the algorithm will place another point randomly</li>
+      <li>then it will choose one point among the first <span id='num-output-2'></span> and place the next point between the last random point and the chosen one. This point will be placed at placed <span id='prop-output'></span> between the last point and the target</li>
+      <li>the last step will reapeat indefinetedly</li>
+    </ol>
+    <div id='toggle'>
+      <label for='n'>Points</label><br>
+      <input id='n' type="number" value='3' inputmode="numeric" pattern="[0-9]*" title='points to play with' onchange='updateInput();' onblur='releaseInput()' />
+    </div>
+</div>
+<div id='sketch'>
+</div>
+</body>
+</html>
