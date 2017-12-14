@@ -43,8 +43,8 @@ function draw() {
 function Point(xpos, ypos) {
   this.x = xpos;
   this.y = ypos;
-  this.d = 2;        // diameter
-  this.c = 0;        // color
+  this.d = 1.5;        // diameter
+  this.c = color(0,100);        // color
   this.draw = function() {
     stroke(this.c);
     strokeWeight(this.d);
