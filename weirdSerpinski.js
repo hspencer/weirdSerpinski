@@ -74,3 +74,11 @@ function updateInput(){
 function releaseInput(){
   inputClicked = false;
 }
+
+function touchStarted(){
+  mouseClicked();
+}
+
+function touchEnded(){
+  releaseInput();
+}
