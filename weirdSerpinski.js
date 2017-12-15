@@ -1,11 +1,15 @@
+/*
+
+Weird Serpinski
+
+*/
+
+
 var num, numO1, num02, prop;
 var maxPoints = 2000;
 var Points = [];
 var inputBox;
-var inputClicked;  // declare the variable that tracks the state
-
-
-
+var inputBlock;  // declare the variable that tracks the state of the input box
 
 function setup() {
   var myCanvas = createCanvas(screen.width, screen.height);
@@ -16,7 +20,7 @@ function setup() {
   inputBox = document.getElementById('toggle');
 
   updateInput();
-  inputClicked = false;
+  inputBlock = false;
 }
 
 function draw() {
@@ -43,7 +47,7 @@ function draw() {
 function Point(xpos, ypos) {
   this.x = xpos;
   this.y = ypos;
-  this.d = 1.5;        // diameter
+  this.d = 1.5;                 // diameter
   this.c = color(0,100);        // color
   this.draw = function() {
     stroke(this.c);
@@ -53,7 +57,7 @@ function Point(xpos, ypos) {
 }
 
 function mouseClicked() {
-  if (Points.length <= num && inputClicked == false) {
+  if (Points.length <= num && !inputBlock) {
     var p = new Point(mouseX, mouseY);
     p.d = 5;
     p.c = color(200, 10, 10);
@@ -62,7 +66,7 @@ function mouseClicked() {
 }
 
 function updateInput(){
-  inputClicked = true;
+  inputBlock = true;
   Points = [];
   num = document.getElementById('n').value;
   numO1.innerHTML = num;
@@ -71,14 +75,5 @@ function updateInput(){
   propO.innerHTML = prop;
 }
 
-function releaseInput(){
-  inputClicked = false;
-}
-
-function touchStarted(){
-  mouseClicked();
-}
-
-function touchEnded(){
-  releaseInput();
-}
+function block(){inputBlock = true;}
+function unblock(){inputBlock = false;}

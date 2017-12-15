@@ -26,7 +26,7 @@
     </ol>
     <div id='toggle'>
       <label for='n'>Points</label><br>
-      <input id='n' type="number" value='3' inputmode="numeric" pattern="[0-9]*" title='points to play with' onchange='updateInput();' onblur='releaseInput()' />
+      <input id='n' type="number" value='3' inputmode="numeric" pattern="[0-9]*" title='points to play with' onchange='updateInput();' onmouseover='block()' onmouseout='unblock()' onblur='unblock()'/>
     </div>
   </div>
   <div id='sketch'>
