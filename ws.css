@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+a, a:visited{
+  color: rgba(200, 90, 90);
+}
+
 h1{
   font-size: 1.2rem;
 }
@@ -18,6 +22,7 @@ em{
 }
 
 #overlay{
+  color: #FFF;
   display: inline-block;
   max-width: 450px;
   position: absolute;
@@ -48,13 +53,14 @@ em{
 }
 
 #toggle input{
+  color: #FFF;
   display: inline-block;
   font-size: 20px;
   padding: 6px 8px;
-  border: 1px solid rgba(0,0,0,.2);
+  border: 1px solid rgba(255,255,255,.2);
   border-radius: 2px;
-  background-color: beige;
+  background-color: black;
 }
 
 input[type='number']{width: 60px}
-input[type='button']{color: rgba(0,0,0,.2)}
+input[type='button']{color:  rgba(255,255,255,.2);}

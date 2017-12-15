@@ -21,7 +21,7 @@ function setup() {
 	cursor(CROSS);
 	updateInput();
 	inputBlock = false;
-	background(255);
+	background(0);
 }
 
 function draw() {
@@ -30,8 +30,11 @@ function draw() {
 		Points[randomVertex].draw();
 		var lastX = Points[Points.length-1].x;
 		var lastY = Points[Points.length-1].y;
+
 		var newX = (lastX + Points[randomVertex].x*(num-2)) / (num-1);
 		var newY = (lastY + Points[randomVertex].y*(num-2)) / (num-1);
+
+
 		p = new Point(newX, newY);
 		Points.push(p);
 		p.draw();
@@ -42,7 +45,7 @@ function Point(xpos, ypos) {
 	this.x = xpos;
 	this.y = ypos;
 	this.d = 2;
-	this.c = color(0, 200);
+	this.c = color(255, 200);
 	this.draw = function() {
 		stroke(this.c);
 		strokeWeight(this.d);
@@ -54,14 +57,14 @@ function mouseClicked() {
 	if (Points.length <= num && !inputBlock) {
 		var p = new Point(mouseX, mouseY);
 		p.d = 5;
-		p.c = color(200, 10, 10);
+		p.c = color(255, 90, 90);
 		Points.push(p);
 		p.draw();
 	}
 }
 
 function updateInput(){
-	background(255);
+	background(0);
 	inputBlock = true;
 	Points = [];
 	num = document.getElementById('n').value;
