@@ -19,7 +19,6 @@ em{
 
 #overlay{
   display: inline-block;
-  /* width: 100%; */
   max-width: 450px;
   position: absolute;
   top: 0;
@@ -48,11 +47,14 @@ em{
   letter-spacing: 0.1ex;
 }
 
-#toggle input[type='number']{
+#toggle input{
   display: inline-block;
-  width: 70px;
   font-size: 20px;
   padding: 6px 8px;
   border: 1px solid rgba(0,0,0,.2);
   border-radius: 2px;
+  background-color: beige;
 }
+
+input[type='number']{width: 60px}
+input[type='button']{color: rgba(0,0,0,.2)}

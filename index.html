@@ -1,13 +1,13 @@
 <html>
 <head>
   <meta charset='UTF-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Weird Serpinski</title>
   <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
   <script language='javascript' type='text/javascript' src='libraries/p5.js'></script>
   <script language='javascript' type='text/javascript' src='libraries/p5.dom.js'></script>
   <script language='javascript' type='text/javascript' src='weirdSerpinski.js'></script>
-  <link rel="stylesheet" type="text/css" href="ws.css">
+  <link rel='stylesheet' type='text/css' href='ws.css'>
   <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
 
   <!-- This line removes any default padding and style.
@@ -26,7 +26,8 @@
     </ol>
     <div id='toggle'>
       <label for='n'>Points</label><br>
-      <input id='n' type="number" value='3' inputmode="numeric" pattern="[0-9]*" title='points to play with' onchange='updateInput();' onmouseover='block()' onmouseout='unblock()' onblur='unblock()'/>
+      <input id='n' type='number' value='3' inputmode='numeric' pattern='[0-9]*' width='2' title='points to play with' onchange='updateInput()' onmouseover='block()' onmouseout='unblock()' onblur='unblock()'/>
+      <input type='button' value='clear' onmouseout='unblock()' onclick='updateInput()'  />
     </div>
   </div>
   <div id='sketch'>
