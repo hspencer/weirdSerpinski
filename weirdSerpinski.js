@@ -21,7 +21,7 @@ function setup() {
 	cursor(CROSS);
 	updateInput();
 	inputBlock = false;
-	background(0);
+	background(255);
 }
 
 function draw() {
@@ -44,8 +44,8 @@ function draw() {
 function Point(xpos, ypos) {
 	this.x = xpos;
 	this.y = ypos;
-	this.d = 2;
-	this.c = color(255, 200);
+	this.d = 1;
+	this.c = color(0, 200);
 	this.draw = function() {
 		stroke(this.c);
 		strokeWeight(this.d);
@@ -57,14 +57,14 @@ function mouseClicked() {
 	if (Points.length <= num && !inputBlock) {
 		var p = new Point(mouseX, mouseY);
 		p.d = 5;
-		p.c = color(255, 90, 90);
+		p.c = color(172,33,9);
 		Points.push(p);
 		p.draw();
 	}
 }
 
 function updateInput(){
-	background(0);
+	background(255);
 	inputBlock = true;
 	Points = [];
 	num = document.getElementById('n').value;
