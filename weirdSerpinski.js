@@ -26,6 +26,7 @@ function setup() {
 
 function draw() {
 	if(Points.length >= num){
+		for(let i = 0; i < 50; i++){
 		var randomVertex = Math.floor(random(0, num));
 		Points[randomVertex].draw();
 		var lastX = Points[Points.length-1].x;
@@ -34,10 +35,12 @@ function draw() {
 		var newX = (lastX + Points[randomVertex].x*(num-2)) / (num-1);
 		var newY = (lastY + Points[randomVertex].y*(num-2)) / (num-1);
 
+		
+			p = new Point(newX, newY);
+			Points.push(p);
+			p.draw();
+		}
 
-		p = new Point(newX, newY);
-		Points.push(p);
-		p.draw();
 	}
 }
 
