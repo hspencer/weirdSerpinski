@@ -20,11 +20,12 @@ h1{
 em{
   font-family: Georgia, serif;
   font-style: italic;
+  color: #CC2222;
 }
 
 #overlay{
   display: inline-block;
-  max-width: 450px;
+  max-width: 80%;
   position: absolute;
   top: 0;
   left: 0;

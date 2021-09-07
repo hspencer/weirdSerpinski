@@ -12,7 +12,7 @@ var inputBox;
 var inputBlock;  // declare the boolean that tracks the state of the input box
 
 function setup() {
-	var myCanvas = createCanvas(screen.width, screen.height);
+	var myCanvas = createCanvas(windowWidth, windowHeight);
 	myCanvas.parent('sketch');
 	numO1 = document.getElementById('num-output-1');
 	numO2 = document.getElementById('num-output-2');
